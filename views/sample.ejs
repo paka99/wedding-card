@@ -135,14 +135,23 @@
     <div class="inner">
         <article class="box">
             <header>
-                <h2>저희 둘의 이야기</h2>
+                <h2>둘의 이야기</h2>
             </header>
             <div class="content">
-                <p>엄격한 부모님 밑에서 자라... 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히 으히히</p>
+                <p>처음만났던 떨림을 아직도 기억합니다
+                    같이 수업듣는 강의실은 내내 봄이었고
+                    만나온 지난 6년은 여름이었습니다.
+                </p>
+                <p>
+
+                    계절이 무르익는 어느 10월 가을 날
+                    다시 새로운 봄을 시작하려합니다.
+                    그 따뜻한 출발을 응원해주시고 지켜봐주시기 바랍니다.
+                </p>
             </div>
-            <footer>
-                <a href="generic.html" class="button alt">Learn More</a>
-            </footer>
+            <!--<footer>-->
+            <!--<a href="generic.html" class="button alt">Learn More</a>-->
+            <!--</footer>-->
         </article>
     </div>
     <a href="#two" class="more">Learn More</a>
@@ -181,9 +190,9 @@
                 </a>
 
             </div>
-            <footer>
-                <!--<a href="generic.html" class="button alt">Learn More</a>-->
-            </footer>
+            <!--<footer>-->
+            <!--<a href="generic.html" class="button alt">Learn More</a>-->
+            <!--</footer>-->
         </article>
     </div>
     <a href="#three" class="more">Learn More</a>
@@ -196,7 +205,7 @@
             <header>
                 <h2>오시는길</h2>
             </header>
-                <!--<div class="content" id="map" style="width:500px;height:400px; position: center">-->
+            <!--<div class="content" id="map" style="width:500px;height:400px; position: center">-->
             <div class="content come-map" id="map" style="width: 100%; height: 400px; position: center"></div>
             <!--<button onclick="displayMap()">지도 초기화</button>-->
             <!--<button onclick="setZoomable(true)">확대/축소 켜기</button>-->
@@ -225,6 +234,43 @@
         </article>
     </div>
     <a href="#four" class="more">Learn More</a>
+</section>
+
+<section id="four" class="wrapper post bg-img" data-bg="https://imagescdn.gettyimagesbank.com/500/202007/jv12052891.jpg">
+    <div class="inner">
+        <article class="box">
+            <header>
+                <h2>방명록</h2>
+            </header>
+            <div class="content">
+                <marquee behavior="scroll" direction="left" scrollamount="5">
+                    <div style="display:inline-block;">111111111111111111111111</div>
+                    <div style="display:inline-block;">222222222222222222222222</div>
+                    <div style="display:inline-block;">333333333333333333333333</div>
+                    <div style="display:inline-block;">444444444444444444444444</div>
+                </marquee>
+                <marquee behavior="scroll" direction="right" scrollamount="7">
+                    <div style="display:inline-block;">111111111111111111111111</div>
+                    <div style="display:inline-block;">222222222222222222222222</div>
+                    <div style="display:inline-block;">333333333333333333333333</div>
+                    <div style="display:inline-block;">444444444444444444444444</div>
+                </marquee>
+                <marquee behavior="scroll" direction="left" scrollamount="6">
+                    <div style="display:inline-block;">111111111111111111111111</div>
+                    <div style="display:inline-block;">222222222222222222222222</div>
+                    <div style="display:inline-block;">333333333333333333333333</div>
+                    <div style="display:inline-block;">444444444444444444444444</div>
+                </marquee>
+                <marquee behavior="scroll" direction="right" scrollamount="4">
+                    <div style="display:inline-block;">111111111111111111111111</div>
+                    <div style="display:inline-block;">222222222222222222222222</div>
+                    <div style="display:inline-block;">333333333333333333333333</div>
+                    <div style="display:inline-block;">444444444444444444444444</div>
+                </marquee>
+            </div>
+        </article>
+    </div>
+    <!--<a href="#four" class="more">Learn More</a>-->
 </section>
 
 <!-- Footer -->
@@ -314,7 +360,7 @@
         map.setCenter(coords);
     }
 
-    kakao.maps.event.addListener(marker, 'click', function() {
+    kakao.maps.event.addListener(marker, 'click', function () {
         focusOnMarker();
     });
 
@@ -326,7 +372,7 @@
 
     map.setCenter(coords);
     map.setZoomable(false);
-    
+
 
     // $(".come-map").bind("wheel mousewheel DOMMouseScroll", function(e){
     //     e.preventDefault();
