@@ -197,11 +197,28 @@
                 <h2>오시는길</h2>
             </header>
                 <!--<div class="content" id="map" style="width:500px;height:400px; position: center">-->
-            <div class="content" id="map" style="width: 100%; height: 400px; position: center">
-            </div>
+            <div class="content" id="map" style="width: 100%; height: 400px; position: center"></div>
+            <button onclick="displayMap()">지도 초기화</button>
+            <!--<button onclick="setZoomable(true)">확대/축소 켜기</button>-->
+
+            <p style="margin: 0.2em;">
+                <span>상록아트홀</span> 5층 아트홀
+            </p>
+
+            <p style="margin: 0;">
+                <span>서울 강남구 언주로 508 </span>공무원연금공단 5층
+            </p>
+
+            <p style="margin: 0;">
+                <span>02-564-5757</span>
+                <!--<a href="tel:02-564-5757" target="_blank" class="button alt" style="width:10%">-->
+                <!--<img src="/images/btn_tel.png" width="15px">-->
+                <!--</a>-->
+            </p>
+
             <footer style="padding: 1em;">
                 <a href="//map.kakao.com/link/map/2009675378" target="_blank" class="button alt">카카오맵 바로보기</a>
-                <a href="//map.kakao.com/link/to/2009675378" target="_blank" class="button alt">카카오맵 길찾기</a>
+                <!--<a href="//map.kakao.com/link/to/2009675378" target="_blank" class="button alt">카카오맵 길찾기</a>-->
                 <!--<a href="generic.html" class="button alt">네이버맵 바로보기</a>-->
                 <!--<a href="generic.html" class="button alt">티맵 바로보기</a>-->
             </footer>
@@ -273,6 +290,7 @@
 <script src="assets/js/photo-swipe.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cd4b8165f74901761b7e296d31a76033&libraries=services"></script>
 <script>
+    // 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
         mapOption = {
             // center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -281,35 +299,48 @@
         };
 
     var map = new kakao.maps.Map(mapContainer, mapOption);
+    var zoomControl = new kakao.maps.ZoomControl();
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 
-    // 주소-좌표 변환 객체를 생성합니다
-    var geocoder = new kakao.maps.services.Geocoder();
+    function setZoomable(zoomable) {
+        // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+        map.setZoomable(zoomable);
+    }
 
-    // 주소로 좌표를 검색합니다
-    geocoder.addressSearch('서울 강남구 언주로 508 공무원연금공단 5층', function(result, status) {
+    function displayMap() {
+        // 주소-좌표 변환 객체를 생성합니다
+        var geocoder = new kakao.maps.services.Geocoder();
 
-        // 정상적으로 검색이 완료됐으면
-        if (status === kakao.maps.services.Status.OK) {
+        // 주소로 좌표를 검색합니다
+        geocoder.addressSearch('서울 강남구 언주로 508 공무원연금공단 5층', function(result, status) {
+            // 정상적으로 검색이 완료됐으면
+            if (status === kakao.maps.services.Status.OK) {
 
-            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+                var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
 
-            // 결과값으로 받은 위치를 마커로 표시합니다
-            var marker = new kakao.maps.Marker({
-                map: map,
-                position: coords
-            });
+                // 결과값으로 받은 위치를 마커로 표시합니다
+                var marker = new kakao.maps.Marker({
+                    map: map,
+                    position: coords
+                });
 
-            // 인포윈도우로 장소에 대한 설명을 표시합니다
-            var infowindow = new kakao.maps.InfoWindow({
-                content: '<div style="width:150px; text-align:center; color:black; ">상록아트홀 5층</div>',
-                // removable : iwRemoveable
-            });
-            infowindow.open(map, marker);
+                // 인포윈도우로 장소에 대한 설명을 표시합니다
+                var infowindow = new kakao.maps.InfoWindow({
+                    content: '<div style="width:150px; text-align:center; color:black; ">상록아트홀 5층</div>',
+                    // removable : iwRemoveable
+                });
+                infowindow.open(map, marker);
 
-            // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-            map.setCenter(coords);
-        }
-    });
+                // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                map.setCenter(coords);
+            }
+        });
+
+        map.setZoomable(false);
+    }
+
+    displayMap();
+
 </script>
 
 
