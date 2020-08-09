@@ -190,17 +190,20 @@
 </section>
 
 <!-- Three -->
-<section id="three" class="wrapper post bg-img" data-bg="">
+<section id="three" class="wrapper post bg-img" data-bg="https://imagescdn.gettyimagesbank.com/500/202008/a12073785.jpg">
     <div class="inner">
-        <article class="box">
+        <article class="box" style="padding-bottom: 0.5em;">
             <header>
                 <h2>오시는길</h2>
             </header>
-            <div class="content">
-                <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate a duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                <!--<div class="content" id="map" style="width:500px;height:400px; position: center">-->
+            <div class="content" id="map" style="width: 100%; height: 400px; position: center">
             </div>
-            <footer>
-                <a href="generic.html" class="button alt">Learn More</a>
+            <footer style="padding: 1em;">
+                <a href="//map.kakao.com/link/map/2009675378" target="_blank" class="button alt">카카오맵 바로보기</a>
+                <a href="//map.kakao.com/link/to/18577297" target="_blank" class="button alt">카카오맵 길찾기</a>
+                <!--<a href="generic.html" class="button alt">네이버맵 바로보기</a>-->
+                <!--<a href="generic.html" class="button alt">티맵 바로보기</a>-->
             </footer>
         </article>
     </div>
@@ -256,6 +259,7 @@
 <!--</footer>-->
 
 <!-- Scripts -->
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -267,9 +271,47 @@
 <script src="assets/js/photoswipe-ui-default.min.js"></script>
 
 <script src="assets/js/photo-swipe.js"></script>
-
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cd4b8165f74901761b7e296d31a76033&libraries=services"></script>
 <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            // center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            center: new kakao.maps.LatLng(37.5039660612952, 127.042909941112), // 지도의 중심좌표
+            level: 5 // 지도의 확대 레벨
+        };
+
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    // 주소-좌표 변환 객체를 생성합니다
+    var geocoder = new kakao.maps.services.Geocoder();
+
+    // 주소로 좌표를 검색합니다
+    geocoder.addressSearch('서울 강남구 언주로 508 공무원연금공단 5층', function(result, status) {
+
+        // 정상적으로 검색이 완료됐으면
+        if (status === kakao.maps.services.Status.OK) {
+
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+            // 결과값으로 받은 위치를 마커로 표시합니다
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: coords
+            });
+
+            // 인포윈도우로 장소에 대한 설명을 표시합니다
+            var infowindow = new kakao.maps.InfoWindow({
+                content: '<div style="width:150px; text-align:center; color:black; ">상록아트홀 5층</div>',
+                // removable : iwRemoveable
+            });
+            infowindow.open(map, marker);
+
+            // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+            map.setCenter(coords);
+        }
+    });
 </script>
+
 
 </body>
 </html>
