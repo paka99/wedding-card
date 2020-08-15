@@ -1,21 +1,24 @@
 @charset "UTF-8";
-@import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,600,700,800");
-
 /*
 	Road Trip by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
-/*html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {*/
-/*margin: 0;*/
-/*padding: 0;*/
-/*border: 0;*/
-/*font-size: 100%;*/
-/*font: inherit;*/
-/*vertical-align: baseline;*/
-/*}*/
+@font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmoneyRoundWindRegular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 body {
     margin: 0;
@@ -58,68 +61,12 @@ body {
     box-sizing: border-box;
 }
 
-/* Containers */
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80em;
-}
-
-/* Grid */
-
-.row {
-    border-bottom: solid 1px transparent;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.row > * {
-    float: left;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.row:after, .row:before {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-.row.uniform > * > :first-child {
-    margin-top: 0;
-}
-
-.row.uniform > * > :last-child {
-    margin-bottom: 0;
-}
-
-.row > * {
-    padding: 0 0 0 2em;
-}
-
-.row {
-    margin: 0 0 -1px -2em;
-}
-
-.row.uniform > * {
-    padding: 2em 0 0 2em;
-}
-
-.row.uniform {
-    margin: -2em 0 -1px -2em;
-}
-
 /* Basic */
 body {
     -ms-overflow-style: scrollbar;
 }
 
 @media screen and (max-width: 480px) {
-
     html, body {
         min-width: 320px;
     }
@@ -146,7 +93,6 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 }
 
 @media screen and (max-width: 1280px) {
-
     .inner {
         width: 65em;
     }
@@ -154,19 +100,15 @@ body.is-loading *, body.is-loading *:before, body.is-loading *:after {
 }
 
 @media screen and (max-width: 980px) {
-
     .inner {
         width: 80%;
     }
-
 }
 
 @media screen and (max-width: 736px) {
-
     .inner {
         width: 90%;
     }
-
 }
 
 /* Type */
@@ -176,7 +118,7 @@ body {
 }
 
 body, input, select, textarea {
-    font-family: "MapoFlowerIsland", Arial, Helvetica, sans-serif;
+    font-family: "TmoneyRoundWindExtraBold";
     font-size: 13pt;
     font-weight: 300;
     line-height: 1.65;
@@ -243,6 +185,8 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
     margin: 0 0 1em 0;
     text-transform: uppercase;
+
+    color: #fff;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -292,7 +236,7 @@ blockquote {
 code {
     border-radius: 4px;
     border: solid 1px;
-    font-family: "Courier New", monospace;
+    font-family: "TmoneyRoundWindExtraBold", monospace;
     font-size: 0.9em;
     margin: 0 0.25em;
     padding: 0.25em 0.65em;
@@ -300,7 +244,7 @@ code {
 
 pre {
     -webkit-overflow-scrolling: touch;
-    font-family: "Courier New", monospace;
+    font-family: "TmoneyRoundWindExtraBold", monospace;
     font-size: 0.9em;
     margin: 0 0 2em 0;
 }
@@ -343,10 +287,6 @@ a {
 }
 
 strong, b {
-    color: #fff;
-}
-
-h1, h2, h3, h4, h5, h6 {
     color: #fff;
 }
 
@@ -830,7 +770,7 @@ textarea:invalid {
 .select-wrapper:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: TmoneyRoundWindExtraBold;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;
@@ -2618,7 +2558,7 @@ body.is-loading #banner:before {
 .post .more:before {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: FontAwesome;
+    font-family: TmoneyRoundWindExtraBold;
     font-style: normal;
     font-weight: normal;
     text-transform: none !important;

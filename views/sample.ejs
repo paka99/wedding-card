@@ -12,43 +12,17 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
-    <!--<link rel="stylesheet" href="assets/css/images.css" />-->
     <style>
-        @font-face {
-            font-family: 'ImcreSoojin';
-            src: url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'MapoFlowerIsland';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-
     </style>
 
-    <!--<link rel="stylesheet" href="assets/css/default-skin.css">-->
     <link rel="stylesheet" href="https://photoswipe.com/dist/default-skin/default-skin.css?v=4.1.3-1.0.4">
     <link rel="stylesheet" href="assets/css/photoswipe.css">
-
-    <!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
-    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--&lt;!&ndash;&#45;&#45;&#45;&#45; Include the above in your HEAD tag &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
-
-    <!--<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">-->
-    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>-->
 </head>
 <body>
 
 <!-- Header -->
 <header id="header">
     <div class="logo">
-        <!--<a href="#">준석 & 소정 결혼 초대장 <span>by TEMPLATED</span></a>-->
         <a href="#">준석 & 소정 결혼 초대장</a>
     </div>
     <!--<a href="#menu"><span>Menu</span></a>-->
@@ -69,63 +43,28 @@
 <!--</ul>-->
 <!--</nav>-->
 
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
+<%- include('photoswipe_template', {}); %>
 
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar" style="top: 3.2em;">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<!-- Banner -->
-<!--
-  Note: To show a background image, set the "data-bg" attribute below
-  to the full filename of your image. This is used in each section to set
-  the background image.
--->
 <section id="banner" class="bg-img" data-bg="http://k.kakaocdn.net/dn/cuIRPg/btqGgkYmxgQ/pAenNKkdK9fztOb0oBNp60/img.jpg">
     <div class="inner">
         <header>
-            <h1>이준석</h1>
-            <h2>그리고</h2>
-            <h1>김소정</h1>
+            <div class="our_name">
+                <h1 style="margin: 0;">이준석</h1>
+                <h2 style="padding-bottom: 0.5em; padding-top: 0.5em; margin: 0;">&</h2>
+                <h1>김소정</h1>
+            </div>
             <!--<h1>결혼합니다</h1>-->
-            <h2 style="visibility: hidden">dummy</h2>
-            <h2 style="visibility: hidden">dummy</h2>
-            <h2 style="visibility: hidden">dummy</h2>
-            <h2>2020.10.18 12:30 PM</h2>
-            <h2>상록아트홀 5층 아트홀</h2>
+            <div class="dummy_padding" style="visibility: hidden;">
+                <h2>...</h2>
+                <h2>...</h2>
+                <h2>...</h2>
+                <h2>...</h2>
+            </div>
+            <div class="wedding_location">
+                <h2 style="margin: 0;">2020.10.18 (일)</h2>
+                <h2>12:30 PM</h2>
+                <h2>상록아트홀 5층 아트홀</h2>
+            </div>
         </header>
     </div>
 </section>
@@ -138,23 +77,48 @@
                 <h2>둘의 이야기</h2>
             </header>
             <div class="content">
-                <p>처음만났던 떨림을 아직도 기억합니다
+                <p>
+                    처음만났던 떨림을 아직도 기억합니다.
                     같이 수업듣는 강의실은 내내 봄이었고
                     만나온 지난 6년은 여름이었습니다.
                 </p>
                 <p>
-
                     계절이 무르익는 어느 10월 가을 날
                     다시 새로운 봄을 시작하려합니다.
                     그 따뜻한 출발을 응원해주시고 지켜봐주시기 바랍니다.
                 </p>
+
+                <div>
+                    <p>신랑 이준석</p>
+
+                    <p>신부 김소정</p>
+
+                    <div>
+                        <div>
+                            <p>신랑측 혼주</p>
+
+                            <div>
+                                아버지 이용준
+                                어머니 김영희
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>신부측 혼주</p>
+
+                            <div>
+                                아버지 김기종
+                                어머니 정연옥
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
             </div>
-            <!--<footer>-->
-            <!--<a href="generic.html" class="button alt">Learn More</a>-->
-            <!--</footer>-->
         </article>
-    </div>
-    <a href="#two" class="more">Learn More</a>
+    </div>    <a href="#two" class="more">Learn More</a>
 </section>
 
 <!-- Two -->
@@ -272,56 +236,6 @@
     </div>
     <!--<a href="#four" class="more">Learn More</a>-->
 </section>
-
-<!-- Footer -->
-<!--<footer id="footer">-->
-<!--<div class="inner">-->
-
-<!--<h2>Contact Me</h2>-->
-
-<!--<form action="#" method="post">-->
-
-<!--<div class="field half first">-->
-<!--<label for="name">Name</label>-->
-<!--<input name="name" id="name" type="text" placeholder="Name">-->
-<!--</div>-->
-<!--<div class="field half">-->
-<!--<label for="email">Email</label>-->
-<!--<input name="email" id="email" type="email" placeholder="Email">-->
-<!--</div>-->
-<!--<div class="field">-->
-<!--<label for="message">Message</label>-->
-<!--<textarea name="message" id="message" rows="6" placeholder="Message"></textarea>-->
-<!--</div>-->
-<!--<ul class="actions">-->
-<!--<li><input value="Send Message" class="button alt" type="submit"></li>-->
-<!--</ul>-->
-<!--</form>-->
-
-<!--<ul class="icons">-->
-<!--<li>-->
-<!--<a href="#" class="icon round fa-twitter"><span class="label">Twitter</span></a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="#" class="icon round fa-facebook"><span class="label">Facebook</span></a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="#" class="icon round fa-instagram"><span class="label">Instagram</span></a>-->
-<!--</li>-->
-<!--</ul>-->
-
-<!--<div class="copyright">-->
-<!--&copy; Untitled. Design:-->
-<!--<a href="https://templated.co">TEMPLATED</a>-->
-<!--. Images:-->
-<!--<a href="https://unsplash.com">Unsplash</a>-->
-<!--.-->
-<!--</div>-->
-
-<!--</div>-->
-<!--</footer>-->
-
-<!-- Scripts -->
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
