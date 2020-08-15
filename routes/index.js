@@ -28,7 +28,13 @@ router.get('/visitor', function (req, res, next) {
         let allMessage = [];
 
         result.body.hits.hits.forEach(function (doc) {
-            allMessage.push(doc._source.message);
+            let msg = {
+                writer: doc._source.user,
+                contents: doc._source.message,
+                time: doc._source['@timestamp'],
+            };
+
+            allMessage.push(msg);
             // console.log(doc._source.message);
         });
 
