@@ -11,7 +11,7 @@
     <meta property="og:image" content="images/opening.jpg">
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="assets/css/roadtrip.css"/>
     <link rel="stylesheet" href="assets/css/chatbox.css"/>
     <style>
     </style>
@@ -29,24 +29,10 @@
     <!--<a href="#menu"><span>Menu</span></a>-->
 </header>
 
-<!-- Nav -->
-<!--<nav id="menu">-->
-<!--<ul class="links">-->
-<!--<li>-->
-<!--<a href="index.html">Home</a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="generic.html">Generic</a>-->
-<!--</li>-->
-<!--<li>-->
-<!--<a href="elements.html">Elements</a>-->
-<!--</li>-->
-<!--</ul>-->
-<!--</nav>-->
-
 <%- include('photoswipe_template', {}); %>
 
 <section id="banner" class="bg-img" data-bg="http://k.kakaocdn.net/dn/cuIRPg/btqGgkYmxgQ/pAenNKkdK9fztOb0oBNp60/img.jpg">
+    <!--<div class="section" id="banner" style="background-image: url('http://k.kakaocdn.net/dn/cuIRPg/btqGgkYmxgQ/pAenNKkdK9fztOb0oBNp60/img.jpg');">-->
     <div class="inner">
         <header>
             <div class="our_name">
@@ -113,13 +99,10 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </article>
-    </div>    <a href="#two" class="more">Learn More</a>
+    </div>
 </section>
 
 <!-- Two -->
@@ -160,7 +143,6 @@
             <!--</footer>-->
         </article>
     </div>
-    <a href="#three" class="more">Learn More</a>
 </section>
 
 <!-- Three -->
@@ -198,7 +180,6 @@
             </footer>
         </article>
     </div>
-    <a href="#four" class="more">Learn More</a>
 </section>
 
 <section id="four" class="wrapper post bg-img" data-bg="https://imagescdn.gettyimagesbank.com/500/202007/jv12052891.jpg">
@@ -212,18 +193,14 @@
                 <marquee behavior="scroll" direction="left" scrollamount="5" style="margin: 0">
                 </marquee>
                 <marquee behavior="scroll" direction="right" scrollamount="7" style="margin: 0">
-                    <!--<div style="display:inline-block;">111111111111111111111111</div>-->
                 </marquee>
                 <marquee behavior="scroll" direction="left" scrollamount="6" style="margin: 0">
-
                 </marquee>
                 <marquee behavior="scroll" direction="right" scrollamount="4" style="margin: 0">
-
                 </marquee>
             </div>
         </article>
     </div>
-    <!--<a href="#four" class="more">Learn More</a>-->
 </section>
 
 <script src="assets/js/jquery.min.js"></script>
@@ -231,7 +208,7 @@
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/roadtrip.js"></script>
 <script src="assets/js/visitor.js"></script>
 
 <script src="assets/js/photoswipe.min.js"></script>
@@ -275,8 +252,7 @@
     infowindow.open(map, marker);
 
     map.setCenter(coords);
-    map.setZoomable(false);
-
+    // map.setZoomable(false);
 
     // $(".come-map").bind("wheel mousewheel DOMMouseScroll", function(e){
     //     e.preventDefault();
