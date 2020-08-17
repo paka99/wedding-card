@@ -30,19 +30,40 @@
 }
 .chatbox__messages__user-message--ind-message {
     background: rgba(255, 255, 255, 0.2);
-    padding: 1em 0;
+    margin-right: 1em;
+
+    padding-bottom: .3em;
     height: auto;
-    width: 65%;
-    border-radius: 5px;
-    margin: 2em 1em;
-    overflow: auto;
+    border-radius: 10px;
+
+    min-width: 12em;
+
+    display:inline-block;
 }
+
 .chatbox__messages__user-message--ind-message > p.message {
     color: #fff;
     font-size: 1em;
+    margin: 0;
+    padding-top: .5em;
+    padding-bottom: .6em;
+    padding-left: 1em;
+    padding-right: .9em;
+
+    text-align:left;
 }
+
 .chatbox__messages__user-message--ind-message > p.name {
     color: #fff;
-    font-size: 0.7em;
-    margin: 0 2.8em;
+    font-size: .8em;
+    margin: 0;
+
+    padding-right: 1em;
+
+    color: lightskyblue;
+    text-align:right;
+}
+
+.chatbox__messages__user-message--ind-message > p.name::before {
+    content: "- ";
 }
