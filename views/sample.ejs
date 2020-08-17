@@ -261,6 +261,43 @@
     </div>
 </section>
 
+<section id="five" class="wrapper">
+    <form id="visitor-message" action="">
+        <div class="row uniform">
+            <div class="visitor-info">
+                <div class="visitor-writer" style="margin-left: 1em; padding: 0; padding-left: 1em;">
+                    <input type="text" name="name" id="name" value="" placeholder="작성자">
+                </div>
+                <div class="visitor-password" style="margin-left: 1em; padding: 0; padding-left: 1em;">
+                    <input type="password" name="password" id="password" value="" placeholder="비밀번호 (삭제시 이용)">
+                </div>
+            </div>
+
+            <div>
+                <div class="select-person">
+                    <input type="radio" id="show-visitor" name="select-person">
+                    <label for="show-visitor" style="font-size: .8em;">신부에게 쓰기</label>
+
+                    <input type="radio" id="jun-visitor" name="select-person">
+                    <label for="jun-visitor" style="font-size: .8em;">신랑에게 쓰기</label>
+                </div>
+
+                <!--<div class="select-person">-->
+                    <!---->
+                <!--</div>-->
+
+                <div class="write_message" style="width: 100%; margin-left: 1em; margin-right: 1em;">
+                    <textarea name="message" id="message" placeholder="축하의 글을 남겨주세요!"></textarea>
+                </div>
+            </div>
+
+            <div>
+                <button class="write_button" type="submit">글쓰기</button>
+            </div>
+        </div>
+    </form>
+</section>
+
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -317,7 +354,6 @@
     // $(".come-map").bind("wheel mousewheel DOMMouseScroll", function(e){
     //     e.preventDefault();
     // });
-
 
 
 </script>

@@ -45,6 +45,9 @@ router.get('/visitor', function (req, res, next) {
 
 router.post('/visitor', function (req, res, next) {
     let user = req.body.writer;
+    let password = req.body.password;
+
+    let personGubun = req.body.gubun;
     let message = req.body.message;
 
     let timestamp = new Date();
@@ -54,6 +57,9 @@ router.post('/visitor', function (req, res, next) {
 
         body: {
             user: user,
+            password: password,
+            gubun: personGubun,
+
             message: message,
             '@timestamp':  timestamp,
         }
