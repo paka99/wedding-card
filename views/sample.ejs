@@ -12,6 +12,7 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="assets/css/roadtrip.css"/>
+    <link rel="stylesheet" href="assets/css/custom.css"/>
     <link rel="stylesheet" href="assets/css/chatbox.css"/>
     <style>
     </style>
@@ -32,13 +33,12 @@
 <%- include('photoswipe_template', {}); %>
 
 <section id="banner" class="bg-img" data-bg="http://k.kakaocdn.net/dn/cuIRPg/btqGgkYmxgQ/pAenNKkdK9fztOb0oBNp60/img.jpg">
-    <!--<div class="section" id="banner" style="background-image: url('http://k.kakaocdn.net/dn/cuIRPg/btqGgkYmxgQ/pAenNKkdK9fztOb0oBNp60/img.jpg');">-->
     <div class="inner">
         <header>
             <div class="our_name">
-                <h1 style="margin: 0;">이준석</h1>
-                <h2 style="padding-bottom: 0.5em; padding-top: 0.5em; margin: 0;">&</h2>
-                <h1>김소정</h1>
+                <h1 style="margin: 0; font-size: 3.5em;">이준석</h1>
+                <h2 style="padding-bottom: 0.5em; padding-top: 0.5em; margin: 0; color: rgba(255, 255, 255 ,0.75);">&</h2>
+                <h1 style="margin: 0; font-size: 3.5em;">김소정</h1>
             </div>
             <!--<h1>결혼합니다</h1>-->
             <div class="dummy_padding" style="visibility: hidden;">
@@ -64,38 +64,41 @@
                 <h2>둘의 이야기</h2>
             </header>
             <div class="content">
-                <p>
-                    처음만났던 떨림을 아직도 기억합니다.
-                    같이 수업듣는 강의실은 내내 봄이었고
-                    만나온 지난 6년은 여름이었습니다.
-                </p>
-                <p>
-                    계절이 무르익는 어느 10월 가을 날
-                    다시 새로운 봄을 시작하려합니다.
-                    그 따뜻한 출발을 응원해주시고 지켜봐주시기 바랍니다.
-                </p>
+                <div class="intro_text">
+                    <p>
+                        처음만났던 떨림을 아직도 기억합니다. <br>
+                        같이 수업듣는 강의실은 내내 봄이었고,<br>
+                        만나온 지난 6년은 여름이었습니다.
+                    </p>
+                    <p>
+                        계절이 무르익는 어느 10월 가을 날.<br>
+                        다시 새로운 봄을 시작하려합니다.<br>
+                        그 따뜻한 출발을 응원해주시고 지켜봐주시기 바랍니다.
+                    </p>
+                </div>
 
-                <div>
-                    <p>신랑 이준석</p>
+                <div class="person_list">
+                    <div class="main_person">
+                        <h3><span style="color: powderblue;">신랑</span> 이준석</h3>
+                        <h3><span style="color: lightpink;">신부</span> 김소정</h3>
+                    </div>
 
-                    <p>신부 김소정</p>
+                    <div class="flex flex-4">
+                        <div class="additional_person" style="width: 48%">
+                            <h3 style="color: powderblue;">신랑측 혼주</h3>
 
-                    <div>
-                        <div>
-                            <p>신랑측 혼주</p>
-
-                            <div>
-                                아버지 이용준
-                                어머니 김영희
+                            <div class="parent_person">
+                                <h4><span>아버지</span> 이용준</h4>
+                                <h4><span>어머니</span> 김영희</h4>
                             </div>
                         </div>
 
-                        <div>
-                            <p>신부측 혼주</p>
+                        <div class="additional_person" style="width: 48%">
+                            <h3 style="color: lightpink;">신부측 혼주</h3>
 
-                            <div>
-                                아버지 김기종
-                                어머니 정연옥
+                            <div class="parent_person">
+                                <h4><span>아버지</span> 김기종</h4>
+                                <h4><span>어머니</span> 정연욱</h4>
                             </div>
                         </div>
                     </div>
@@ -106,35 +109,84 @@
 </section>
 
 <!-- Two -->
-<section id="two" class="wrapper post bg-img" data-bg="http://k.kakaocdn.net/dn/ccm1Qk/btqGdtWAlDo/NOdRTxohhQOPg8zqzk7Wk1/img.jpg">
+<section id="two" class="wrapper post bg-img" data-bg="http://k.kakaocdn.net/dn/ccm1Qk/btqGdtWAlDo/NOdRTxohhQOPg8zqzk7Wk1/img.jpg" style="height: 90%;">
     <div class="inner">
         <article class="box" style="padding:0.3em;">
             <header>
                 <h2>웨딩 사진</h2>
             </header>
             <div class="my-gallery">
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHml5n%2FbtqGdQ4Spyd%2FLRPaIMefFsHPlR5c9TQcn1%2Fimg.jpg" data-size="1280x853">
-                    <img src="http://k.kakaocdn.net/dn/9CX0j/btqGg6yt1hZ/MpqeY8pu6PXKaVEnsOWZT1/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbelzDf%2FbtqGK4HAw7z%2F4vzOf3nmGh5Dl46sIW5zZk%2Fimg.jpg" data-size="1280x796">
+                    <img src="http://k.kakaocdn.net/dn/bodHJx/btqGGGnPBDT/IPF4rQ6CqQX205VMmuzsC1/img.jpg" class="zoom img-fluid " alt="">
                 </a>
-
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQIqrb%2FbtqGg6ZxuaR%2FhpI3p0tiinWeGt215D3Fbk%2Fimg.jpg" data-size="1280x1920">
-                    <img src="http://k.kakaocdn.net/dn/cGJVaB/btqGevsPewD/OqFYlB7FD9CBg3TlRFnLKk/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FGDu4O%2FbtqGNCKNINM%2FVKQFlfTlP0Kpdacvi3tKu1%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/cbYS2M/btqGPOK36CJ/qpDlYKDKpgBQQUduL7MjIk/img.jpg" class="zoom img-fluid " alt="">
                 </a>
-
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc62HZA%2FbtqGgkcXari%2FRkzKy5GMeDqxd8ctqpks2K%2Fimg.jpg" data-size="1280x853">
-                    <img src="http://k.kakaocdn.net/dn/7exKO/btqGc8SMgcK/njvqfVDYFYZ6fWlVj4Oij0/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FvDJTT%2FbtqGGH1rhlP%2FaOi6qxnfvuwj5mQgK5o3i1%2Fimg.jpg" data-size="1280x1837">
+                    <img src="http://k.kakaocdn.net/dn/cUcocC/btqGGGg6ME4/MsQdzTJAzePVQhglo8MCKK/img.jpg" class="zoom img-fluid " alt="">
                 </a>
-
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHml5n%2FbtqGdQ4Spyd%2FLRPaIMefFsHPlR5c9TQcn1%2Fimg.jpg" data-size="1280x853">
-                    <img src="http://k.kakaocdn.net/dn/9CX0j/btqGg6yt1hZ/MpqeY8pu6PXKaVEnsOWZT1/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcbCtGE%2FbtqGQb7euDE%2FUSjCPSttaS8KKTklSUkKO0%2Fimg.jpg" data-size="1280x1706">
+                    <img src="http://k.kakaocdn.net/dn/cxBVIM/btqGK3hBNdo/5P4fZzZo8VqKbLwgntJQtK/img.jpg" class="zoom img-fluid " alt="">
                 </a>
-
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQIqrb%2FbtqGg6ZxuaR%2FhpI3p0tiinWeGt215D3Fbk%2Fimg.jpg" data-size="1280x1920">
-                    <img src="http://k.kakaocdn.net/dn/cGJVaB/btqGevsPewD/OqFYlB7FD9CBg3TlRFnLKk/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcvUvSS%2FbtqGJwEj60j%2FkTVJKrgK6xOLbiEdSXUHbk%2Fimg.jpg" data-size="1280x1923">
+                    <img src="http://k.kakaocdn.net/dn/cAKh5r/btqGFbBAxz5/JGRz2C4zkN6qkYhYY7QY4k/img.jpg" class="zoom img-fluid " alt="">
                 </a>
-
-                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc62HZA%2FbtqGgkcXari%2FRkzKy5GMeDqxd8ctqpks2K%2Fimg.jpg" data-size="1280x853">
-                    <img src="http://k.kakaocdn.net/dn/7exKO/btqGc8SMgcK/njvqfVDYFYZ6fWlVj4Oij0/img.jpg" class="zoom img-fluid " alt="">
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbPEQos%2FbtqGK3PrboO%2FPlQ1O424CZ9LoYIkqfkg71%2Fimg.jpg" data-size="1280x850">
+                    <img src="http://k.kakaocdn.net/dn/bg2hZZ/btqGNCxhygl/ix9TDkXD5JFdCMhmLIA6fK/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsIVJ1%2FbtqGQcrwHRB%2F4XE0L4hbt9Z7UL1kdmcVf0%2Fimg.jpg" data-size="1280x1804">
+                    <img src="http://k.kakaocdn.net/dn/kpTIw/btqGK6yI8Dc/q5KQ2ivvGkeW2CsSasXWSk/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FmlpnX%2FbtqGK4gw7YX%2FkNTlK6k6YUeo89QPVv4G0k%2Fimg.jpg" data-size="1280x1868">
+                    <img src="http://k.kakaocdn.net/dn/TIbir/btqGG0Gnvyp/FCRdFJAG3aUcrVx4a8pzn0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbJjBOP%2FbtqGHMgWli9%2F4j8FNLt1UkeRYu9ZP0mgmK%2Fimg.jpg" data-size="1280x1804">
+                    <img src="http://k.kakaocdn.net/dn/qtPqV/btqGJu0PmKH/aO2v0C8eHhsSkUSgS7zqn0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FKrA5b%2FbtqGG8Y2LyS%2FStQO9ffxbnXauZTbkYSAs0%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/7lKrl/btqGG0zE1UP/onq3K4x5sCZHli1zKkmM7k/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc883kB%2FbtqGK5s2eQ5%2FBFxfOnVgJT1tQRNgWga8lK%2Fimg.jpg" data-size="1280x1906">
+                    <img src="http://k.kakaocdn.net/dn/yWZx9/btqGH15UyQk/7QauQnw1CbQTV5s5fxnsyK/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcJfAMS%2FbtqGHNGSo3s%2FVvDboYwqiNO2TBQ1NN5bM1%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/bGFEgv/btqGIgIQMBR/yCjRe2qk3j6PLkKR8Djyo0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbBTTga%2FbtqGHp6Z9Ce%2FBrSsOFEN0Lk05HGAk1H9Ck%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/5226C/btqGHqkClUI/JLSSg4ci6ukQG7AE3oaT40/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FnVuA1%2FbtqGG94I6Ir%2FbnpbvmcbKkLN62NWoeHOe1%2Fimg.jpg" data-size="1280x845">
+                    <img src="http://k.kakaocdn.net/dn/kbubP/btqGJu0Ppwy/0Vi3mMKZs9KnN5bA3QA82K/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdzey6Q%2FbtqGK4HAxg4%2FlrIbjjhA8Fu5am4S90CZv0%2Fimg.jpg" data-size="1280x1600">
+                    <img src="http://k.kakaocdn.net/dn/bvRaaW/btqGK32Y9GQ/pQjFGkmf4hEhyiccBANJR0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fdz4MwO%2FbtqGHMnIsE8%2FpIw0TBmWUKboeTOvl9QzzK%2Fimg.jpg" data-size="1280x1935">
+                    <img src="http://k.kakaocdn.net/dn/byxEJ0/btqGG8Si2US/IQ7kQHFlm4dJyFWQCkqRYk/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcsOmnu%2FbtqGNCcXAmx%2Fs7oMWCFaVUU7O5AhvlSGs0%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/tX52L/btqGIhAXCq1/pkCc5nFy05j6CFRKk6FAV1/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FXaP1j%2FbtqGH2qbEAp%2F5cuXB6XlfeX02yMjwOyQ4K%2Fimg.jpg" data-size="1280x1921">
+                    <img src="http://k.kakaocdn.net/dn/c3HIdm/btqGK5zRaEC/BcGKfyFdCLMy8fxTaYEWOk/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FCmJjS%2FbtqGJvMchSY%2FvEdl1qz10fnW42W0dsbnuk%2Fimg.jpg" data-size="1280x1823">
+                    <img src="http://k.kakaocdn.net/dn/IjJoj/btqGNCxhFQu/ytSN7rtnKKnsGSltTJZJk0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbvvEcT%2FbtqGJvyDJQC%2FrnssjlcFHcesObYOXASjkk%2Fimg.jpg" data-size="1280x1925">
+                    <img src="http://k.kakaocdn.net/dn/IB2MB/btqGJu0Pui7/PuyWr49M6wgfKoNidEGzP0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fk6SZm%2FbtqGIKbPYtk%2Fbm8j49AxU7xJkeSE8tGbr0%2Fimg.jpg" data-size="1280x1920">
+                    <img src="http://k.kakaocdn.net/dn/cyzQjT/btqGJuGxN29/BbxWHKXjSs58cKosQwRAu0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F9EAnU%2FbtqGK5GxFow%2FDvTscaZsy7efN9qjcIl5i0%2Fimg.jpg" data-size="1280x1889">
+                    <img src="http://k.kakaocdn.net/dn/c14SdJ/btqGNDbTGPr/96xmMIRpKGJ9NXGZk5K1TK/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FSgIiN%2FbtqGK3IGnYq%2FoAkRf4yvWBZsoOnASWU5J0%2Fimg.jpg" data-size="1280x850">
+                    <img src="http://k.kakaocdn.net/dn/9q40n/btqGK3onbJn/jpMmW8TSNYJUh4E5iYgSp0/img.jpg" class="zoom img-fluid " alt="">
+                </a>
+                <a class="image grid" href="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FHHKRj%2FbtqGH00daKB%2FsT4CYAqBKHYWT49inyC6A1%2Fimg.jpg" data-size="1280x850">
+                    <img src="http://k.kakaocdn.net/dn/Qz7IT/btqGG8Si771/UPk4WzwuP4Mxaq4tSWFkjK/img.jpg" class="zoom img-fluid " alt="">
                 </a>
 
             </div>

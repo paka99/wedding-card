@@ -1,0 +1,89 @@
+
+
+/* 부모님 이름 글자 크기 */
+
+.person_list {
+    font-family: Cafe24Oneprettynight;
+    margin: 1em;
+}
+
+.main_person {
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 1680px) {
+    .main_person h3 {
+        margin-bottom: 1em;
+        font-size: 2.5em;
+    }
+
+    .main_person h3 span {
+        margin-right: 3em;
+        font-weight: 100;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main_person h3 {
+        margin-bottom: .2em;
+        font-size: 2.2em;
+    }
+
+    .main_person h3 span {
+        margin-right: 1.2em;
+        font-weight: 300;
+        font-size: .6em;
+    }
+}
+
+
+
+/* 부모님 이름 글자 크기 */
+@media screen and (max-width: 1680px) {
+    .additional_person h3 {
+        margin-bottom: .5em;
+    }
+
+    .additional_person h3 {
+        margin-bottom: .5em;
+    }
+
+    .additional_person .parent_person h4 {
+        font-size: 1.3em;
+        margin-bottom: 0.3em;
+    }
+
+    .additional_person .parent_person h4 span{
+        margin-right: .4em;
+        font-size: .7em;
+        font-weight: 300;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .additional_person h3 {
+        margin-bottom: .5em;
+    }
+
+    .additional_person h3 {
+        margin-bottom: .5em;
+    }
+
+    .additional_person .parent_person h4 {
+         font-size: 1.3em;
+         margin-bottom: 0.3em;
+    }
+
+    .additional_person .parent_person h4 span{
+        margin-right: .4em;
+        font-size: .7em;
+        font-weight: 300;
+    }
+}
+
+
+
+.person_list {
+    background: rgba(255, 255, 255, 0.3);
+}
