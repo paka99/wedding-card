@@ -22,7 +22,9 @@ router.get('/visitor', function (req, res, next) {
         body: {
             query: {
                 match_all: {}
-            }
+            },
+
+            size: 50,
         }
     }).then( result => {
         let allMessage = [];
