@@ -1204,6 +1204,10 @@ input[type="radio"]:focus + label:before {
     padding: 0;
 }
 
+.image.grid.more_photo {
+    display: none;
+}
+
 .image.grid img {
     width: 100%;
 }
