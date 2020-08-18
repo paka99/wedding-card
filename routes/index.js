@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 const { Client } = require('@elastic/elasticsearch');
-// const client = new Client({ node: 'http://34.85.40.22:9200' });
-const client = new Client({ node: 'http://10.146.0.2:9200' });
+// const client = new Client({ node: 'http://35.200.22.62:9200' });
+const client = new Client({ node: 'http://10.146.0.3:9200' });
 
 
 /* GET home page. */
