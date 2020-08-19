@@ -91,3 +91,5 @@ typings/
 
 public/images/
 public/javascripts/
+
+dist/

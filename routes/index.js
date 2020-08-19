@@ -17,7 +17,7 @@ router.get('/sample', function(req, res, next) {
 });
 
 router.get('/invite', function(req, res, next) {
-    res.render('sample', {} );
+    res.render('invite', {} );
 });
 
 router.get('/visitor', function (req, res, next) {
