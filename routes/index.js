@@ -16,6 +16,10 @@ router.get('/sample', function(req, res, next) {
     res.render('sample', {} );
 });
 
+router.get('/invite', function(req, res, next) {
+    res.render('sample', {} );
+});
+
 router.get('/visitor', function (req, res, next) {
     client.search({
         index: "visitor-message",
