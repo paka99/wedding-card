@@ -115,44 +115,4 @@
 
     });
 
-    $("#visitor-message").submit( function(e) {
-        e.preventDefault();
-
-        let writeInfo = {};
-
-        let writerName = $( "#visitor-message input[id='name']" );
-        console.log($(writerName).val());
-        writeInfo['writer'] = $(writerName).val();
-
-        let password = $( "#visitor-message input[id='password']" );
-        console.log($(password).val());
-        writeInfo['password'] = $(password).val();
-
-        let gubun = undefined;
-        let checkedRadio = $( "#visitor-message input[type='radio']:checked" );
-        if ( checkedRadio.length > 0) {
-            if ( checkedRadio[0].id === 'show-visitor') {
-                gubun = 'show';
-
-            } else if (checkedRadio[0].id === 'jun-visitor') {
-                gubun = 'jun';
-            }
-        }
-        console.log(gubun);
-        writeInfo['gubun'] = gubun;
-
-        var message = $("textarea").val();
-        console.log(message);
-        writeInfo['message'] = message;
-
-        $.ajax({
-            type: "POST",
-            url: "/visitor",
-            data: writeInfo,
-        }).done (
-            displayVisitor()
-        )
-
-    });
-
 })(jQuery);

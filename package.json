@@ -4,23 +4,25 @@
   "private": true,
   "scripts": {
     "start": "webpack --config webpack.config.js && node ./bin/www",
-    "build_script": "webpack --config webpack.config.js"
+    "build_script": "webpack --config webpack.config.js",
+    "scsss": "node-sass ./assets/css/button.scss --output assets/css"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.31.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1",
-    "webpack-node-externals": "^1.7.2",
     "@elastic/elasticsearch": "^7.8.0",
     "aos": "^2.3.4",
+    "babel-loader": "^8.0.6",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "node-sass": "^4.12.0",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }

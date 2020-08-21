@@ -266,7 +266,7 @@ body {
 @media screen and (max-width: 480px) {
 
     html, body {
-        min-width: 320px;
+        /*min-width: 320px;*/
     }
 
 }
@@ -2485,7 +2485,7 @@ body.subpage {
     #banner {
         background-attachment: scroll;
         min-height: 0;
-        padding: 8em 2em 4em 2em;
+        padding: 8em 1em 4em 1em;
     }
 
     #banner h1 {
