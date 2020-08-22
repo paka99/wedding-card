@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="assets/css/chatbox.css"/>
     <link rel="stylesheet" href="assets/css/button.css"/>
 
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/samoothness/jquery-ui.css"/>
+    <!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/samoothness/jquery-ui.css"/>-->
 
 
     <style>
@@ -268,20 +268,20 @@
     </div>
 </section>
 
-<section id="five" class="wrapper" style="padding: 2em 0">
-    <form id="visitor-message" action="">
+<section id="five" class="wrapper post visitor" style="text-align: left;align-items: normal; padding-top: 3em;">
+    <form id="visitor-message" action="" style="z-index: 2;">
         <div class="row uniform">
-            <div class="visitor-info" style="width: 100%; margin: .7em; padding-top: 0;padding-left: 2em;">
+            <div class="visitor-info" style="margin: .7em; padding-top: 0;">
                 <div class="visitor-writer" style="display: inline-block; width: 35%;">
-                    <input type="text" name="name" id="name" value="" placeholder="작성자" style="font-size: .8em;">
+                    <input type="text" name="name" id="name" value="" placeholder="작성자" style="font-size: .8em;" required>
                 </div>
                 <div class="visitor-password" style="display: inline-block; width: 45%;">
-                    <input type="password" name="password" id="password" value="" placeholder="비밀번호 (삭제시 이용)" style="font-size: .8em;">
+                    <input type="password" name="password" id="password" value="" placeholder="비밀번호 (삭제시 이용)" style="font-size: .8em;" required>
                 </div>
             </div>
 
 
-            <div class="select-person" style="width: 100%; margin: .7em; margin-bottom: 0; padding-top: 0;padding-left: 2em;">
+            <div class="select-person" style="width: 100%; margin: .7em; margin-bottom: 0; padding-top: 0;">
                 <input type="radio" id="show-visitor" name="select-person">
                 <label for="show-visitor" style="font-size: .8em;">신부에게 쓰기</label>
 
@@ -293,13 +293,13 @@
                 <!---->
             <!--</div>-->
 
-            <div class="write_message" style="width: 100%; margin: .7em; margin-top: 0; padding-top: 0;padding-left: 2em; width:90%;">
-                <textarea name="message" id="message" placeholder="축하의 글을 남겨주세요!"></textarea>
+            <div class="write_message" style="margin: .7em; margin-top:0; padding-top:0; width:80%; min-height: 5em">
+                <textarea name="message" id="message" placeholder="축하의 글을 남겨주세요!" required></textarea>
             </div>
 
 
             <div class="write_submit" style="width: 100%; margin: .7em; margin-top: 0; padding-top: 0;padding-left: 2em; width:90%;">
-                <button class="write_button" id="button" type="submit" style="width: 30%; font-family: inherit;">글쓰기</button>
+                <button class="write_button" id="button" type="submit" style="font-family: inherit;">글쓰기</button>
             </div>
         </div>
     </form>

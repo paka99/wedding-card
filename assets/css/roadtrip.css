@@ -255,18 +255,13 @@ body {
 }
 
 /* Basic */
-@-ms-viewport {
-    width: device-width;
-}
-
 body {
     -ms-overflow-style: scrollbar;
 }
 
 @media screen and (max-width: 480px) {
-
     html, body {
-        /*min-width: 320px;*/
+        min-width: 320px;
     }
 
 }
@@ -2699,6 +2694,27 @@ body.is-loading #banner:before {
     position: absolute;
     top: 0;
     width: 100%;
+    z-index: 1;
+}
+
+.visitor:before {
+    -moz-transition: opacity 3s ease;
+    -webkit-transition: opacity 3s ease;
+    -ms-transition: opacity 3s ease;
+    transition: opacity 3s ease;
+    -moz-transition-delay: 0.5s;
+    -webkit-transition-delay: 0.5s;
+    -ms-transition-delay: 0.5s;
+    transition-delay: 0.5s;
+    content: '';
+    display: block;
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0.45;
+    position: absolute;
+    top: 0;
+    /*width: 100%;*/
     z-index: 1;
 }
 

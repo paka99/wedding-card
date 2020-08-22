@@ -61,19 +61,19 @@ $("#visitor-message").submit( function(e) {
 
 /////
 $(function() {
-    $( "#button" ).click(function() {
-        $( "#button" ).addClass( "onclick", 250, validate);
+    $( ".write_button" ).click(function() {
+        $( ".write_button" ).addClass( "onclick", 250, validate);
     });
 
     function validate() {
         setTimeout(function() {
-            $( "#button" ).removeClass( "onclick" );
-            $( "#button" ).addClass( "validate", 450, callback );
+            $( ".write_button" ).removeClass( "onclick" );
+            $( ".write_button" ).addClass( "validate", 450, callback );
         }, 1500 );
     }
     function callback() {
         setTimeout(function() {
-            $( "#button" ).removeClass( "validate" );
+            $( ".write_button" ).removeClass( "validate" );
         }, 1250 );
     }
 });
