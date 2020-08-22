@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "webpack --config webpack.config.js && node ./bin/www",
+    "start": "node ./bin/www",
     "build_script": "webpack --config webpack.config.js",
-    "scsss": "node-sass ./assets/css/button.scss --output assets/css"
+    "scss": "node-sass ./assets/css/button.scss --output assets/css"
   },
   "dependencies": {
     "@babel/core": "^7.4.4",

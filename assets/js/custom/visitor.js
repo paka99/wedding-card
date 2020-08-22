@@ -22,18 +22,42 @@ displayVisitor();
 $("#visitor-message").submit( function(e) {
     e.preventDefault();
 
+    $( ".write_button" ).addClass( "onclick", 250, validate);
+    function validate() {
+        setTimeout(function() {
+            $( ".write_button" ).removeClass( "onclick" );
+            $( ".write_button" ).addClass( "validate", 450, callback );
+        }, 1000 );
+    }
+    function callback() {
+        setTimeout(function() { $( ".write_button" ).removeClass( "validate" ); }, 1250 );
+
+        $( "#visitor-message input[id='name']" ).val('');
+        $( "#visitor-message input[id='password']" ).val('');
+        $("textarea").val('');
+        $( "#visitor-message input[type='radio']").val(false);
+
+        $.ajax({
+            type: "POST",
+            url: "/visitor",
+            data: writeInfo,
+
+        }).done (
+            // ES 쏘고 자동 리프레시
+            setTimeout( displayVisitor(), 200 )
+        )
+    }
+
     let writeInfo = {};
 
-    let writerName = $( "#visitor-message input[id='name']" );
-    console.log($(writerName).val());
-    writeInfo['writer'] = $(writerName).val();
+    const writerName = $( "#visitor-message input[id='name']" ).val();
+    writeInfo['writer'] = writerName;
 
-    let password = $( "#visitor-message input[id='password']" );
-    console.log($(password).val());
-    writeInfo['password'] = $(password).val();
+    const password = $( "#visitor-message input[id='password']" ).val();
+    writeInfo['password'] = password;
 
     let gubun = undefined;
-    let checkedRadio = $( "#visitor-message input[type='radio']:checked" );
+    const checkedRadio = $( "#visitor-message input[type='radio']:checked" );
     if ( checkedRadio.length > 0) {
         if ( checkedRadio[0].id === 'show-visitor') {
             gubun = 'show';
@@ -42,38 +66,9 @@ $("#visitor-message").submit( function(e) {
             gubun = 'jun';
         }
     }
-    console.log(gubun);
     writeInfo['gubun'] = gubun;
 
-    var message = $("textarea").val();
-    console.log(message);
+    const message = $("textarea").val();
     writeInfo['message'] = message;
 
-    // $.ajax({
-    //     type: "POST",
-    //     url: "/visitor",
-    //     data: writeInfo,
-    // }).done (
-    //     displayVisitor()
-    // )
-
-});
-
-/////
-$(function() {
-    $( ".write_button" ).click(function() {
-        $( ".write_button" ).addClass( "onclick", 250, validate);
-    });
-
-    function validate() {
-        setTimeout(function() {
-            $( ".write_button" ).removeClass( "onclick" );
-            $( ".write_button" ).addClass( "validate", 450, callback );
-        }, 1500 );
-    }
-    function callback() {
-        setTimeout(function() {
-            $( ".write_button" ).removeClass( "validate" );
-        }, 1250 );
-    }
 });
