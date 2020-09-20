@@ -1057,7 +1057,7 @@ input[type="radio"] + label:before {
 
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
-    content: '\f00c';
+    content: '✔️';
 }
 
 input[type="checkbox"] + label:before {
@@ -2261,7 +2261,6 @@ body.subpage {
 }
 
 @media screen and (max-width: 736px) {
-
     #menu .close {
         height: 4em;
         line-height: 4em;
