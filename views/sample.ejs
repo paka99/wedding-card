@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/css/chatbox.css"/>
     <link rel="stylesheet" href="assets/css/button.css"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <style>
         /*아무거나*/
@@ -261,30 +262,8 @@
                 </marquee>
             </div>
 
-            <!--Call your modal-->
-<!--            <a class="read_list_button" id="demo01" href="#animatedModal">목록보기</a>-->
-
-            <!--DEMO01-->
-<!--            <div id="animatedModal">-->
-<!--                &lt;!&ndash;THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" &ndash;&gt;-->
-<!--                <div class="close-animatedModal">-->
-<!--                    CLOSE MODAL-->
-<!--                </div>-->
-
-<!--                <div class="modal-content">-->
-<!--                    &lt;!&ndash;Your modal content goes here&ndash;&gt;-->
-<!--                </div>-->
-<!--            </div>-->
-
-            <div id="ex1" class="modal" style="z-index: 5;">
-                <p>Thanks for clicking. That felt good.</p>
-                <a href="#" rel="modal:close">Close</a>
-            </div>
-
-            <button class="read_list_button" id="button" style="font-family: inherit;">
-                <a href="#ex1" rel="modal:open">
+            <button class="read_list_button" onclick="location.href='/invite/visitors';" id="button" style="font-family: inherit;">
                 목록보기
-                </a>
             </button>
         </article>
     </div>
@@ -331,6 +310,7 @@
 <!--<script type="text/javascript" src="assets/js/jquery.min.js"></script>-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 
 <script type="text/javascript" src="assets/js/jquery.scrolly.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.scrollex.min.js"></script>
@@ -346,7 +326,10 @@
 <script type="text/javascript" src="assets/js/custom/photo-swipe.js"></script>
 <script type="text/javascript" src="assets/js/custom/morephoto.js"></script>
 <script type="text/javascript" src="assets/js/custom/kakaomap.js"></script>
+<script type="text/javascript" src="assets/js/custom/animatedModal.js"></script>
+<script type="text/javascript" src="assets/js/custom/md5hash.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>>
 
 </body>
 </html>

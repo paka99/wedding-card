@@ -1,10 +1,12 @@
 module.exports = {
     entry: [
-        './assets/js/custom/kakaomap.js',
-        './assets/js/custom/morephoto.js',
-        './assets/js/custom/photo-swipe.js',
         './assets/js/custom/roadtrip.js',
         './assets/js/custom/visitor.js',
+        './assets/js/custom/photo-swipe.js',
+        './assets/js/custom/morephoto.js',
+        './assets/js/custom/kakaomap.js',
+        './assets/js/custom/animatedModal.js',
+        './assets/js/custom/md5hash.js'
     ],
     output: {
         filename: 'bundle.js'

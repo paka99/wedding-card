@@ -1,12 +1,12 @@
 function parseThumbnailElements(el) {
     let thumbElements = el.querySelectorAll('a');
 
-    let items = [];
+    const items = [];
 
-    thumbElements.forEach( function(linkEl) {
+    thumbElements.forEach( (linkEl) => {
         let size = linkEl.getAttribute('data-size').split('x');
 
-        let item = {
+        const item = {
             src: linkEl.getAttribute('href'),
             msrc: linkEl.getAttribute('href'),
             // msrc: linkEl.getElementsByTagName('img')[0].src,

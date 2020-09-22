@@ -122,8 +122,15 @@ section#five form#visitor-message .write_submit {
 }
 
 
+section#admin-visitor .table-wrapper {
+    font-size: .8em;
+    text-align: center;
+}
 
-
+section#admin-visitor .table-wrapper table thead tr {
+    text-align: center;
+    font-family: inherit;
+}
 
 
 
