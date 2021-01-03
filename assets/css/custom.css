@@ -87,3 +87,22 @@
 .person_list {
     background: rgba(255, 255, 255, 0.3);
 }
+
+.use_transfer {
+    background: rgba(255, 255, 255, 0.3);
+    text-align: justify;
+}
+
+.use_transfer p {
+    margin: 0 0 0 0.8em;
+    font-size: 0.8em;
+}
+
+.use_transfer p b {
+    font-size: 1.1em;
+}
+
+.use_transfer h1 {
+    font-size: 1.2em;
+    margin: 0.8em;
+}
