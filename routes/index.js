@@ -62,7 +62,9 @@ router.get('/invite/visitors', function (req, res, next) {
                 time: doc._source['@timestamp'],
             };
 
-            let today = new Date(Date.parse(msg.time))
+            let a = new Date(Date.parse(doc._source['@timestamp']))
+            // console.log( a.getTimezoneOffset() )
+            let today = new Date(Date.parse(msg.time) + 9 * 60 * 60 * 1000 + a.getTimezoneOffset() * 60 * 1000 )
 
             const dayNames = ['(일요일)', '(월요일)', '(화요일)', '(수요일)', '(목요일)', '(금요일)', '(토요일)'];
             // getDay: 해당 요일(0 ~ 6)를 나타내는 정수를 반환한다.
