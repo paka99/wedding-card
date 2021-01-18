@@ -41,6 +41,14 @@ router.get('/invite/visitors', function (req, res, next) {
                 match_all: {}
             },
 
+            sort: [
+                {
+                    "@timestamp": {
+                        "order": "desc"
+                    }
+                }
+            ],
+
             size: 50,
         }
     }).then(result => {
@@ -53,6 +61,33 @@ router.get('/invite/visitors', function (req, res, next) {
                 contents: doc._source.message,
                 time: doc._source['@timestamp'],
             };
+
+            let today = new Date(Date.parse(msg.time))
+
+            const dayNames = ['(일요일)', '(월요일)', '(화요일)', '(수요일)', '(목요일)', '(금요일)', '(토요일)'];
+            // getDay: 해당 요일(0 ~ 6)를 나타내는 정수를 반환한다.
+            const day = dayNames[today.getDay()];
+
+            const year = today.getFullYear();
+            const month = today.getMonth() + 1;
+            const date = today.getDate();
+            let hour = today.getHours();
+            let minute = today.getMinutes();
+            let second = today.getSeconds();
+            const ampm = hour >= 12 ? 'PM' : 'AM';
+
+            // 12시간제로 변경
+            hour %= 12;
+            if (ampm === 'PM') {
+                hour = hour || 12; // 0 => 12
+            }
+
+            // 10미만인 분과 초를 2자리로 변경
+            minute = minute < 10 ? '0' + minute : minute;
+            second = second < 10 ? '0' + second : second;
+
+            msg.time = `${year}년 ${month}월 ${date}일 ${day} ${hour}:${minute}:${second} ${ampm}`;
+            // msg.time = msg.time.substring(0,19)
 
             allMessage.push(msg);
             // console.log(doc._source.message);
@@ -110,7 +145,7 @@ router.get('/visitor/:id', function (req, res, next) {
         };
 
         res.json({message});
-    }).catch( result => {
+    }).catch(result => {
         console.log("error " + result)
         res.json("error");
     });
@@ -125,7 +160,7 @@ router.post('/visitor', function (req, res, next) {
     let message = req.body.message;
 
 
-    if ( user.indexOf("컵") >= 0 || user.indexOf("cup") >= 0 || user.indexOf("크업") >= 0
+    if (user.indexOf("컵") >= 0 || user.indexOf("cup") >= 0 || user.indexOf("크업") >= 0
         || user.indexOf("레퍼") >= 0 || user.indexOf("refer") >= 0 || user.indexOf("리퍼") >= 0) {
         res.status(414).json({status: 414})
         return;
@@ -167,7 +202,7 @@ router.delete('/visitor/:id', function (req, res, next) {
     }).then(result => {
         const hashPwd = result.body._source.password;
 
-        if ( userHashPwd === hashPwd || userHashPwd === '2be9bd7a3434f7038ca27d1918de58bd' ) {
+        if (userHashPwd === hashPwd || userHashPwd === '2be9bd7a3434f7038ca27d1918de58bd') {
             client.delete({
                 index: esIndexName,
                 id: req.params.id,
